@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>  
+  <Testcase name="TC14242_UsernameFieldPrepopulated" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14247_Invalidchars" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14249_InvalidCredentials" executioncategories="Smoke" execute="Y"></Testcase>
+  <Testcase name="TC14250_ValidLoginsforInactiveuser" executioncategories="Smoke" execute="Y"></Testcase>
+  <Testcase name="TC14253_YPOmembersLogin" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14255_FormerMember" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14299_remembermedefault" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14300_Rememberme_enable_in_loginscreen" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14301_PrepopulatedUsername" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC001_CancelFAQ" executioncategories="Regression" execute="Y"></Testcase>
+  
+  
+  
+</TestCases>

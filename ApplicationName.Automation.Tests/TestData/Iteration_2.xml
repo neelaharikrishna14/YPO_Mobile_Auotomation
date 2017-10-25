@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestData>
+  <SampleLogin>
+    <TDID>644</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </SampleLogin>
+  <TC14240_ValidLogin2>
+    <TDID>644</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </TC14240_ValidLogin2>
+  <TC001_CancelFAQ>
+    <TDID>644</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </TC001_CancelFAQ>
+  <TC14242_UsernameFieldPrepopulated>
+    <TDID>644</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </TC14242_UsernameFieldPrepopulated>
+  <TC14249_InvalidCredentials>
+    <TDID>NA</TDID>
+    <UserName>Umanath_bhat1</UserName>
+    <Password>ypot3st</Password>
+    <DefectID>NA</DefectID>
+  </TC14249_InvalidCredentials>
+</TestData>

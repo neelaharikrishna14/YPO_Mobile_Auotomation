@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationPages>  
+  <Page name="Home">   
+    <!--SignIn-->
+    <Object name="Search">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>.//input[@title='Search for Products, Brands and More']</Value>
+      </Browser>
+    </Object>
+        <Object name="SubmitSearch">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>.//button[@type='submit']</Value>
+      </Browser>
+    </Object>
+    <Object name="SearchResults">
+      <Browser value="Androidchrome">
+        <Findby>XPath</Findby>      
+        <Value></Value>
+      </Browser>
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>.//a//div[contains(text(),'$')]</Value>
+      </Browser>
+    </Object>
+    <Object name="BuyNow">
+      <Browser value="Androidchrome">
+        <Findby>XPath</Findby>      
+        <Value></Value>
+      </Browser>
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>.//button[@type='submit' and text()='BUY NOW']</Value>
+      </Browser>
+    </Object>       
+  </Page>
+  <Page name="HomeSiteLogin">
+    <Object name="UserId">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@class='UIATextField']</Value>
+      </Browser>
+    </Object>
+    
+    <Object name="Directory">
+    <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+      <Findby>XPath</Findby>
+      <Value>//*[@text='Directory']</Value>
+    </Browser>
+  </Object>
+    <Object name="validation_for_invalidlogin">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='You have entered an invalid username or password. Please try again.']</Value>
+      </Browser>
+    </Object>
+    
+    <Object name="Password">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='PASSWORD']</Value>
+      </Browser>
+    </Object>
+    <Object name="SignIn">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Sign In']</Value>
+      </Browser>
+    </Object>
+    <Object name="Menu">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>XPath</Findby>
+        <Value>//div[contains(@class,'navMenuMobile')]</Value>
+      </Browser>
+    </Object>
+    <Object name="claims">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>navClaims</Value>
+      </Browser>
+      </Object>
+    <Object name="NewClaim">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>ClaimsCenterStartNewClaimMain</Value>
+      </Browser>
+    </Object>
+     <Object name="BackToClaimCenter">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>createSourcePage</Value>
+      </Browser>
+    </Object>
+    <Object name="visitHelpCenter">
+    <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+      <Findby>Id</Findby>
+      <Value>visitHelpCenter</Value>
+    </Browser>
+  </Object>
+    <Object name="signOutButton">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>signOutButton</Value>
+      </Browser>
+    </Object>
+    <Object name="EffectiveDateCalendar">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>EffectiveDateCalendar</Value>
+      </Browser>
+    </Object>
+    <Object name="AddressLine1">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>AddressLine1</Value>
+      </Browser>
+    </Object>
+    <Object name="AddressLine2">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>AddressLine2</Value>
+      </Browser>
+    </Object>
+    <Object name="City">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
+        <Findby>Id</Findby>
+        <Value>City</Value>
+      </Browser>
+    </Object>
+    <Object name="State">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>//*[@id="State"]/option[3]</Value>
+      </Browser>
+    </Object>
+    <Object name="Zip">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>Id</Findby>
+        <Value>Zip</Value>
+      </Browser>
+    </Object>    
+    <Object name="searchbox">
+    <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+      <Findby>Id</Findby>
+      <Value>headerQuery</Value>
+    </Browser>
+    </Object>
+    <Object name="searchicon">
+    <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+      <Findby>XPath</Findby>
+      <Value>/html/body/header/div[2]/div/div[3]/div[2]</Value>
+    </Browser>
+  </Object>
+   <Object name="headerSearchBtn">
+      <Browser value="IE,Chrome,Firefox,Safari">
+        <Findby>Id</Findby>
+        <Value>headerSearchBtn</Value>
+      </Browser>
+     <Browser value="Androidchrome">
+       <Findby>Id</Findby>
+       <Value>headerSearchBtnMobile</Value>
+     </Browser>
+    </Object>
+    <Object name="SearchList">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>//*[@id="resultList"]/li[1]/h3</Value>
+      </Browser>
+    </Object>
+    <Object name="Continue">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>//*[@id="CancelPurchase"]/div[5]/div</Value>
+        </Browser>
+    </Object>
+    <Object name="Cancel">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>XPath</Findby>
+        <Value>//*[@id="cancelRequest"]/a</Value>
+      </Browser>
+    </Object>
+    <Object name="BkHelpCenter">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome">
+        <Findby>Id</Findby>
+        <Value>sourcePage</Value>
+      </Browser>
+    </Object>
+    </Page>
+</ApplicationPages>

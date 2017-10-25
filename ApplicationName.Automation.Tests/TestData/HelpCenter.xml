@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestData>
+  <TC001_CancelFAQ>
+    <TDID>4</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </TC001_CancelFAQ>
+  <TC14240_ValidLogin>
+    <TDID>4</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </TC14240_ValidLogin>
+</TestData>

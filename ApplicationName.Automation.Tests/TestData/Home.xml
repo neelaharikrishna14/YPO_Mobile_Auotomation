@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestData>
+  <TC001_SearchForProduct>
+    <TDID>1</TDID>
+    <DefectID>NA</DefectID>
+    <SearchValue>iPhone 7</SearchValue>
+  </TC001_SearchForProduct>
+  <TC14240_ValidLogin>
+    <TDID>644</TDID>
+    <UserName>homesitetestpolicy@hotmail.com</UserName>
+    <Password>Policy@123</Password>
+    <DefectID>NA</DefectID>
+  </TC14240_ValidLogin>
+</TestData>
