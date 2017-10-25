@@ -78,9 +78,9 @@
     <Compile Include="TestScripts\TC002_NewClaims.cs" />
     <Compile Include="TestScripts\TC003_ClaimsReporting.cs" />
     <Compile Include="TestScripts\TC003_PartnerPGR.cs" />
-    <Compile Include="TestScripts\TC14301_PrepopulatedUsername.cs" />
-    <Compile Include="TestScripts\TC14300_Rememberme_enable_in_loginscreen.cs" />
-    <Compile Include="TestScripts\TC14299_remembermedefault.cs" />
+    <Compile Include="TestScripts\TC14299_RememberMeDefaultSetting.cs" />
+    <Compile Include="TestScripts\TC14301_RememberMeEnabledUsernameShouldbePrepopulated.cs" />
+    <Compile Include="TestScripts\TC14300_RememberMeEnableInLoginScreen.cs" />
     <Compile Include="TestScripts\TC14255_FormerMember.cs" />
     <Compile Include="TestScripts\TC14253_YPOmembersLogin.cs" />
     <Compile Include="TestScripts\TC14250_ValidLoginsforInactiveuser.cs" />

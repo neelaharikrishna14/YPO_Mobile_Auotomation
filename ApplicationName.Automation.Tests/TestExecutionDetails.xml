@@ -6,11 +6,7 @@
   <Testcase name="TC14250_ValidLoginsforInactiveuser" executioncategories="Smoke" execute="Y"></Testcase>
   <Testcase name="TC14253_YPOmembersLogin" executioncategories="Regression" execute="Y"></Testcase>
   <Testcase name="TC14255_FormerMember" executioncategories="Regression" execute="Y"></Testcase>
-  <Testcase name="TC14299_remembermedefault" executioncategories="Regression" execute="Y"></Testcase>
-  <Testcase name="TC14300_Rememberme_enable_in_loginscreen" executioncategories="Regression" execute="Y"></Testcase>
-  <Testcase name="TC14301_PrepopulatedUsername" executioncategories="Regression" execute="Y"></Testcase>
-  <Testcase name="TC001_CancelFAQ" executioncategories="Regression" execute="Y"></Testcase>
-  
-  
-  
-</TestCases>
+  <Testcase name="TC14299_RememberMeDefaultSetting" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14300_RememberMeEnableInLoginScreen" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14301_RememberMeEnabledUsernameShouldbePrepopulated" executioncategories="Regression" execute="Y"></Testcase>
+  </TestCases>

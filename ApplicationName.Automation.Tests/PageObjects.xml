@@ -42,6 +42,12 @@
         <Value>//*[@class='UIATextField']</Value>
       </Browser>
     </Object>
+    <Object name="RememeberMe">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Remember Me']/following-sibling::*[@onScreen='true']</Value>
+      </Browser>
+    </Object>
     
     <Object name="Directory">
     <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">

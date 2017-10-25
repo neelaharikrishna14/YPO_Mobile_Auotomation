@@ -30,4 +30,27 @@
     <Password>ypot3st</Password>
     <DefectID>NA</DefectID>
   </TC14249_InvalidCredentials>
+
+  <TC14299_RememberMeDefaultSetting>
+    <TDID>NA</TDID>
+    <ExpectedStatus>0</ExpectedStatus>
+    <DefectID>NA</DefectID>
+  </TC14299_RememberMeDefaultSetting>
+
+  <TC14300_RememberMeEnableInLoginScreen>
+    <TDID>NA</TDID>
+    <ExpectedStatus>0</ExpectedStatus>
+    <DefectID>NA</DefectID>
+  </TC14300_RememberMeEnableInLoginScreen>
+
+
+  <TC14301_RememberMeEnabledUsernameShouldbePrepopulated>
+    <TDID>NA</TDID>
+    <UserName>Umanath_bhat</UserName>
+    <Password>ypot3st</Password>
+    <ExpectedStatus>0</ExpectedStatus>
+    <DefectID>NA</DefectID>
+  </TC14301_RememberMeEnabledUsernameShouldbePrepopulated>
+
+
 </TestData>

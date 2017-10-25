@@ -80,7 +80,15 @@ namespace ApplicationName.Automation
                 return Locator.GetLocator("validation_for_invalidlogin");
             }
         }
-        
+        By btn_RememeberMe
+        {
+            get
+            {
+                return Locator.GetLocator("RememeberMe");
+            }
+        }
+
+
 
         By btn_claims
         {
@@ -249,9 +257,10 @@ namespace ApplicationName.Automation
 
                 Reporter.Add(new Act("Click on Login"));
                 ClickOnObject(btn_LogIn);
+
                 Thread.Sleep(10000);
-                Reporter.Add(new Act("Verify the validation"));
-                GetObjectAttributeValue(validation_msg, "text");
+                Reporter.Add(new Act("Verify the successful login"));
+                WaitForElementVisible(text_Directory);
                 isSuccess = true;
                
                 
@@ -264,7 +273,57 @@ namespace ApplicationName.Automation
             return isSuccess;
         }
 
-       
+
+
+
+        public bool VerifyRemememberMe(string expectedValue = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+                Thread.Sleep(10000);
+                Reporter.Add(new Act("Verify the Remember me button status"));
+                ValidateObjectAttributeValue(btn_RememeberMe, "text", expectedValue);
+                isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool ClickonRemememberMe()
+        {
+            bool isSuccess = false;
+            try
+            {
+                ClickOnObject(btn_RememeberMe);
+                Reporter.Add(new Act("Successfully Clicked on RememeberMe Button"));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public bool Claims()
         {
             bool isSuccess = false;
