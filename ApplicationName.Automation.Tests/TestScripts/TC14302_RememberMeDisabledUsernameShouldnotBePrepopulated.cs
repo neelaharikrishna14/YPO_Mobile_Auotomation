@@ -22,18 +22,16 @@ using System.Threading;
 namespace ApplicationName.Automation.Tests.TestScripts
 {
     [Script("Iteration_2", "US5403 -  Remember Me", "", "Mobile", "iOS_Login Screen_Remember Me option ON_Username should be prepopulated")]
-    class TC14301_RememberMeEnabledUsernameShouldbePrepopulated : BaseTest
+    class TC14302_RememberMeDisabledUsernameShouldnotBePrepopulated : BaseTest
     {
         
         protected override void ExecuteTestCase()
         {
-            Reporter.Add(new Chapter("Verify that whether the application save the username used in the last successful login,when the Remember Me setting is ON"));
+            Reporter.Add(new Chapter("Verify that whether the Username field is empty when the user comes to the Login screen to sign in when the Remember Me setting is OFF"));
             var pg_LoginPage = Page<HomeSiteLogin>(Driver,TestDataNode, Reporter);
             Step = "Launch the YPO application";
-            Step = "Click on Remember Me buuton";
-            pg_LoginPage.ClickonRemememberMe();
-            Step = "Verify the Remember me option is ON";
-            pg_LoginPage.VerifyRemememberMe(TestDataNode.SelectSingleNode("ExpectedStatus").InnerText);
+            Step = "Verify the Remember me option status";
+            pg_LoginPage.DisableRememberMeButton();
             Step = "Login to YPO";
             pg_LoginPage.Login(TestDataNode.SelectSingleNode("UserName").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
             Step = "wait for Logged out the YPO Application";
@@ -46,12 +44,10 @@ namespace ApplicationName.Automation.Tests.TestScripts
             dc.SetCapability(IOSMobileCapabilityType.BundleId, "com.ypo.connect.qa");
             Driver = new IOSDriver<IOSElement>(new Uri("http://localhost:4723/wd/hub"), dc);
             Step = "Re-Launched sussessfully";
-            Step = "Username should be prepopulated";
+            Step = "Username should not be prepopulated";
             pg_LoginPage.VerifyUserNameFieldText();
 
-
             
-
         }
 
 

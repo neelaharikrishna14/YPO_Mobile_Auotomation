@@ -53,4 +53,80 @@
   </TC14301_RememberMeEnabledUsernameShouldbePrepopulated>
 
 
+  <TC14302_RememberMeDisabledUsernameShouldnotBePrepopulated>
+    <TDID>NA</TDID>
+    <UserName>Umanath_bhat</UserName>
+    <Password>ypot3st</Password>
+    <ExpectedStatus>0</ExpectedStatus>
+    <DefectID>NA</DefectID>
+  </TC14302_RememberMeDisabledUsernameShouldnotBePrepopulated>
+
+
+  <TC14241_VerifyDisplayOfTermsOfUseLink>
+    <TDID>NA</TDID>
+    <UserName></UserName>
+    <Password></Password>
+    <ExpectedStatus></ExpectedStatus>
+    <DefectID></DefectID>
+  </TC14241_VerifyDisplayOfTermsOfUseLink>
+
+  <TC14243_TermsofUsedocumentwillbeopened>
+    <TDID>NA</TDID>
+    <UserName></UserName>
+    <Password></Password>
+    <ExpectedStatus></ExpectedStatus>
+    <DefectID>NA</DefectID>
+  </TC14243_TermsofUsedocumentwillbeopened>
+
+  <TC14244_ReturntoLoginAfterclosingTermsofUsedocument>
+    <TDID>NA</TDID>
+    <UserName></UserName>
+    <Password></Password>
+    <ExpectedStatus></ExpectedStatus>
+    <DefectID>NA</DefectID>
+  </TC14244_ReturntoLoginAfterclosingTermsofUsedocument>
+
+  <TC14245_VerifyDisplayOfPrivacyPolicylink>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14245_VerifyDisplayOfPrivacyPolicylink>
+  
+  
+  <TC14246_VerifyPrivacyPolicydocumentwillbeopened>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14246_VerifyPrivacyPolicydocumentwillbeopened>
+  
+  
+   <TC14248_ReturnToLoginAfterclosingPrivacyPolicyDoc>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14248_ReturnToLoginAfterclosingPrivacyPolicyDoc>
+  
+  
+   <TC14345_VerifydisplayofTermsofUselink_unauthenticatedusers>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14345_VerifydisplayofTermsofUselink_unauthenticatedusers>
+  
+  
+  <TC14346_TermsofUsedocumentwillbeopened_unauthenticatedusers>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14346_TermsofUsedocumentwillbeopened_unauthenticatedusers>
+  
+  <TC14347_VerifyDisplayOfPrivacyPolicylink_unauthenticatedusers>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14347_VerifyDisplayOfPrivacyPolicylink_unauthenticatedusers>
+  
+    <TC14348_VerifyPrivacyPolicydocumentwillbeopened_unauthenticatedusers>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14348_VerifyPrivacyPolicydocumentwillbeopened_unauthenticatedusers>
+  
+  
+ 
+  
+  
 </TestData>

@@ -55,6 +55,61 @@
       <Value>//*[@text='Directory']</Value>
     </Browser>
   </Object>
+
+    <Object name="TermsOfUse">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[contains(text(),'Terms of Use')]</Value>
+      </Browser>
+    </Object>
+
+    <Object name="Btn_TermsOfUse">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>
+          (//*[@class='UIAView' and ./preceding-sibling::*[@class='UIAImage'] and ./preceding-sibling::*[@class='UIAScrollView'] and ./parent::*[@class='UIAView']]/*[@class='UIAButton'])[1]
+        </Value>
+      </Browser>
+    </Object>
+
+
+    <Object name="Pdf_DocumentPage">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>
+          (//*[@class='UIAView' and ./parent::*[@class='UIAWebView']]/*[@class='UIAView'])[2]
+        </Value>
+      </Browser>
+    </Object>
+
+    <Object name="Btn_Close">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>
+          //*[@class='UIAButton' and @onScreen='true' and @visible='true']
+        </Value>
+      </Browser>
+    </Object>
+    
+
+    <Object name="PrivacyPolicy">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[contains(text(),'Privacy Policy')]</Value>
+      </Browser>
+    </Object>
+
+    <Object name="Btn_PrivacyPolicy">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>
+          (//*[@class='UIAView' and ./preceding-sibling::*[@class='UIAImage'] and ./preceding-sibling::*[@class='UIAScrollView'] and ./parent::*[@class='UIAView']]/*[@class='UIAButton'])[2]
+        </Value>
+      </Browser>
+    </Object>
+    
+    
+    
     <Object name="validation_for_invalidlogin">
       <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
         <Findby>XPath</Findby>

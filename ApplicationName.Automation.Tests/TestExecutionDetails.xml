@@ -9,4 +9,21 @@
   <Testcase name="TC14299_RememberMeDefaultSetting" executioncategories="Regression" execute="Y"></Testcase>
   <Testcase name="TC14300_RememberMeEnableInLoginScreen" executioncategories="Regression" execute="Y"></Testcase>
   <Testcase name="TC14301_RememberMeEnabledUsernameShouldbePrepopulated" executioncategories="Regression" execute="Y"></Testcase>
-  </TestCases>
+  <Testcase name="TC14302_RememberMeDisabledUsernameShouldnotBePrepopulated" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14241_VerifyDisplayOfTermsOfUseLink" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14243_TermsofUsedocumentwillbeopened" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14244_ReturntoLoginAfterclosingTermsofUsedocument" executioncategories="Regression" execute="Y"></Testcase>
+
+ <Testcase name="TC14245_VerifyDisplayOfPrivacyPolicylink" executioncategories="Regression" execute="Y"></Testcase>
+ <Testcase name="TC14246_VerifyPrivacyPolicydocumentwillbeopened" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14248_ReturnToLoginAfterclosingPrivacyPolicyDoc" executioncategories="Regression" execute="Y"></Testcase>
+
+  <Testcase name="TC14345_VerifydisplayofTermsofUselink_unauthenticatedusers" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14346_TermsofUsedocumentwillbeopened_unauthenticatedusers" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14347_VerifyDisplayOfPrivacyPolicylink_unauthenticatedusers" executioncategories="Regression" execute="Y"></Testcase>
+  <Testcase name="TC14348_VerifyPrivacyPolicydocumentwillbeopened_unauthenticatedusers" executioncategories="Regression" execute="Y"></Testcase>
+
+
+  
+
+</TestCases>

@@ -7,6 +7,26 @@ using Selenium.Automation.Accelerators;
 using OpenQA.Selenium.Interactions;
 using System.Collections.Generic;
 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Selenium.Automation.Accelerators;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium.Appium;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Appium.Android;
+using OpenQA.Selenium.Appium.iOS;
+using NUnit;
+using NUnit.Framework;
+using OpenQA.Selenium.Appium.Enums;
+using OpenQA.Selenium.Support.UI;
+using System.Threading;
+
+
 namespace ApplicationName.Automation
 {
     public class HomeSiteLogin : BasePage
@@ -87,6 +107,62 @@ namespace ApplicationName.Automation
                 return Locator.GetLocator("RememeberMe");
             }
         }
+
+
+
+        By Link_TermsOfUse
+        {
+            get
+            {
+                return Locator.GetLocator("TermsOfUse");
+            }
+        }
+
+        By btn_TermsOfUse
+        {
+            get
+            {
+                return Locator.GetLocator("Btn_TermsOfUse");
+            }
+        }
+
+        By pdf_DocumentPage
+        {
+            get
+            {
+                return Locator.GetLocator("Pdf_DocumentPage");
+            }
+        }
+
+        By btn_Close
+        {
+            get
+            {
+                return Locator.GetLocator("Btn_Close");
+            }
+        }
+
+
+        By Link_PrivacyPolicy
+        {
+            get
+            {
+                return Locator.GetLocator("PrivacyPolicy");
+            }
+        }
+
+
+
+
+        By btn_PrivacyPolicy
+        {
+            get
+            {
+                return Locator.GetLocator("Btn_PrivacyPolicy");
+            }
+        }
+
+       
 
 
 
@@ -234,6 +310,8 @@ namespace ApplicationName.Automation
         }
 
 
+
+
         #endregion
 
         #region PageFunctions
@@ -294,6 +372,61 @@ namespace ApplicationName.Automation
         }
 
 
+        public bool VerifyUserNameFieldText()
+        {
+            bool isSuccess = false;
+            try
+            {
+                string UserNameFieldText = GetObjectAttributeValue(txt_UserId, "text");
+                if(UserNameFieldText.Equals(null))
+                {
+                    Reporter.Add(new Act("UsernameField is Empty"));
+                    Reporter.Add(new Act("Value in UsernameField is:"+UserNameFieldText));
+                }
+               // if (!(UserNameFieldText.Equals(null)))
+               else
+                {
+                    Reporter.Add(new Act("UsernameField is not-Empty"));
+                    Reporter.Add(new Act("Value in UsernameField is:"+UserNameFieldText));
+                }
+                isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool DisableRememberMeButton()
+        {
+            bool isSuccess = false;
+            try
+            {
+                string UserNameFieldText = GetObjectAttributeValue(btn_RememeberMe, "text");
+                if (UserNameFieldText.Equals("0"))
+                {
+                    Reporter.Add(new Act("Verify RememberMe Button is OFF"));
+                }
+                if (UserNameFieldText.Equals("1"))
+                {
+                    Reporter.Add(new Act("Verify RememberMe Button is ON"));
+                    ClickonRemememberMe();
+                    Reporter.Add(new Act("RememberMe Button is in OFF Mode"));
+                    ClearObjectValue(txt_UserId);
+                    Reporter.Add(new Act("UserNameField Value is cleared"));
+                }
+                isSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
         public bool ClickonRemememberMe()
         {
             bool isSuccess = false;
@@ -301,6 +434,105 @@ namespace ApplicationName.Automation
             {
                 ClickOnObject(btn_RememeberMe);
                 Reporter.Add(new Act("Successfully Clicked on RememeberMe Button"));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool ClickonTermsofUseLink()
+        {
+            bool isSuccess = false;
+            try
+            {
+                ClickOnObject(btn_TermsOfUse);
+                Reporter.Add(new Act("Successfully Clicked on Terms of Use Link"));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool ClickonPrivacyPolicy()
+        {
+            bool isSuccess = false;
+            try
+            {
+                ClickOnObject(btn_PrivacyPolicy);
+                Reporter.Add(new Act("Successfully Clicked on Privacy Policy Link"));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+        public bool VerifyTermsofUseLink()
+        {
+            bool isSuccess = false;
+            try
+            {
+                //WaitForElementVisible(Link_TermsOfUse);
+                WaitForElementVisible(btn_TermsOfUse);
+                Console.WriteLine("verify block");
+                Reporter.Add(new Act("TermsofUse Link is Present in Login Screen"));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+
+        public bool VerifyPrivacyPolicy()
+        {
+            bool isSuccess = false;
+            try
+            {
+                //WaitForElementVisible(Link_PrivacyPolicy);
+                WaitForElementVisible(btn_PrivacyPolicy);
+                Reporter.Add(new Act("TermsofUse Link is Present in Login Screen"));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool VerifyDocumentLoadedOrNot()
+        {
+            bool isSuccess = false;
+            try
+            {
+                WaitForElementVisible(pdf_DocumentPage);
+                Reporter.Add(new Act("Corresponding PDF Document opened successfully."));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool closeDocument()
+        {
+            bool isSuccess = false;
+            try
+            {
+                ClickOnObject(btn_Close);
+                Reporter.Add(new Act("Document Closed Successfully."));
             }
             catch (Exception ex)
             {
