@@ -31,6 +31,7 @@ namespace ApplicationName.Automation.Tests.TestScripts
             var pg_LoginPage = Page<HomeSiteLogin>(Driver,TestDataNode, Reporter);
             Step = "Launch the YPO application";
             Thread.Sleep(1000);
+
             Step = "Verify the Display Of -Terms Of Use- Link";
             pg_LoginPage.VerifyTermsofUseLink();
 

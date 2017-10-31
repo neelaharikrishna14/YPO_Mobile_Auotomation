@@ -129,6 +129,189 @@
         <Value>//*[@text='Sign In']</Value>
       </Browser>
     </Object>
+
+
+
+
+    <Object name="forgotUsernamelink">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Forgot Username?']</Value>
+      </Browser>
+    </Object>
+    <Object name="forgotPasswordlink">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Forgot Password?']</Value>
+      </Browser>
+    </Object>
+    <Object name="EmailAddress">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='EMAIL ADDRESS']</Value>
+      </Browser>
+    </Object>
+
+    <Object name="NeedFurtherHelpLink">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Need Further Help?']</Value>
+      </Browser>
+    </Object>
+    <Object name="GoBack">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='   GO BACK']</Value>
+      </Browser>
+    </Object>
+    <Object name="TermsAndPolicies">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Terms of Use   |   Privacy Policy']</Value>
+      </Browser>
+    </Object>
+    <Object name="CopyRightYPO2017">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='© 2017 YPO ']</Value>
+      </Browser>
+    </Object>
+    <Object name="HelpDeskEmail">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='helpdesk@ypo.org']</Value>
+      </Browser>
+    </Object>
+    <Object name="PhoneNumber1">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='+1 972 587 1500']</Value>
+      </Browser>
+    </Object>
+    <Object name="PhoneNumber2">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='+1 800 773 7976']</Value>
+      </Browser>
+    </Object>
+    <Object name="M2MXSupportEmail">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='m2mx@ypo.org']</Value>
+      </Browser>
+    </Object>
+
+    <Object name="Directory">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Directory']</Value>
+      </Browser>
+    </Object>
+    <Object name="validation_for_invalidlogin">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='You have entered an invalid username or password. Please try again.']</Value>
+      </Browser>
+    </Object>
+    <Object name="DirectoryText">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Directory']</Value>
+      </Browser>
+    </Object>
+
+    <Object name="YpoApp">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='YPO Connect QA']</Value>
+      </Browser>
+    </Object>
+    
+    <Object name="Password1">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='•••••••']</Value>
+      </Browser>
+    </Object>
+    <Object name="Password2">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='••••••']</Value>
+      </Browser>
+    </Object>
+    
+    
+    
+    <Object name="HelpDesk_ComposeMail_CancelButton">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Cancel']</Value>
+      </Browser>
+    </Object>
+    
+    <Object name="Call_button_PhoneNumber1">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='+1 972 587 1500' and @class='UIAButton']</Value>
+      </Browser>
+    </Object>
+    <Object name="Call_button_PhoneNumber2">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='+1 800 773 7976' and @class='UIAButton']</Value>
+      </Browser>
+    </Object>
+    <Object name="HelpDesk_ComposeMail_DeleteDraft">
+    <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+      <Findby>XPath</Findby>
+      <Value>//*[@text='Delete Draft']</Value>
+    </Browser>
+  </Object>
+    <Object name="HelpDesk_ComposeMail">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='helpdesk@ypo.org' and @class='UIAButton']</Value>
+      </Browser>
+    </Object>
+    <Object name="Cancel_phone_numberfield">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@class='UIAView' and @height>0 and ./*[@class='UIAButton'] and ./*[@text='Terms of Use   |   Privacy Policy']]</Value>
+      </Browser>
+    </Object>  
+    <Object name="InactiveUser_val_msg">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='Your account is currently inactive']</Value>
+      </Browser>
+    </Object>
+    <Object name="RememberMe">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='0' and ./preceding-sibling::*[@text='Remember Me']]</Value>
+      </Browser>
+    </Object>
+
+    <Object name="NoSiM">
+      <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6,iPhone7Plus">
+        <Findby>XPath</Findby>
+        <Value>//*[@text='No SIM']</Value>
+      </Browser>
+    </Object>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <Object name="Menu">
       <Browser value="IE,Chrome,Firefox,Safari,Androidchrome,iPhone6">
         <Findby>XPath</Findby>

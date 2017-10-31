@@ -25,24 +25,19 @@ namespace ApplicationName.Automation.Tests.TestScripts
     class TC14255_FormerMember : BaseTest
     {
         //public IOSDriver<IOSElement> driver;
-        protected override void ExecuteTestCase()
+       
+            protected override void ExecuteTestCase()
         {
            
             Reporter.Add(new Chapter("Validating Sign In"));
-            var pg_CommonPage = Page<Common>(Driver, TestDataNode, Reporter);
-           // var pg_LoginPage = Page<HomeSiteLogin>(Driver, TestDataNode, Reporter);
-            // var pg_claims = Page<Claims>(Driver, TestDataNode, Reporter);
+           var pg_LoginPage = Page<HomeSiteLogin>(Driver, TestDataNode, Reporter);
+           
+            Step = "Login to YPO";
+            pg_LoginPage.Login(TestDataNode.SelectSingleNode("UserName").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
+            Step = "Validate message";
+            pg_LoginPage.InvalidLogin(TestDataNode.SelectSingleNode("invalidcredentialsval_msg").InnerText);
+          
 
-            Step = "Enter username";
-            Reporter.Add(new Act("Validate user name"));
-            Driver.FindElement(By.XPath("xpath=//*[@class='UIATextField']")).Click();
-            Reporter.Add(new Act("Enter user name"));
-            Driver.FindElement(By.XPath("xpath=//*[@class='UIATextField']")).SendKeys("Umanath_bhat");
-            Driver.FindElement(By.XPath("xpath=(//*[@class='UIAView' and ./parent::*[@class='UIAScrollView']]/*[@class='UIAView'])[2]")).SendKeys("ypot3st");
-            Driver.FindElement(By.XPath("xpath=//*[@text='Sign In']")).Click();
-            Thread.Sleep(5000);
-            string text1 = Driver.FindElement(By.XPath("//*[@text='Directory']']")).GetAttribute("value");
-            Console.WriteLine(text1);
 
         }
 

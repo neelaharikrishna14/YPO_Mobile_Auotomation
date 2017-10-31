@@ -15,29 +15,23 @@ using NUnit.Framework;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
-
-
-
-
 namespace ApplicationName.Automation.Tests.TestScripts
 {
-    [Script("Iteration_2", "US5344 - SignIn with user credentials", "", "Mobile", "Error message displayed when valid credentials of inactive user are provided")]
-    class TC14250_ValidLoginsforInactiveuser : BaseTest
+
+    [Script("Iteration_2", "US5409 - NeedFurtherHelpPassword", "", "Mobile", "To verify the options displayed in Need Further Help? screen  from Username Recovery page")]
+    class TC14239_NeedFurtherHelpPassword : BaseTest
     {
-        //public IOSDriver<IOSElement> driver;
         protected override void ExecuteTestCase()
         {
-
 
             Reporter.Add(new Chapter("Validating Sign In"));
             var pg_LoginPage = Page<HomeSiteLogin>(Driver, TestDataNode, Reporter);
 
-            Step = "Usernamefield_pre_populatedifRemembermeisturnedON";
-            pg_LoginPage.InactiveUser(TestDataNode.SelectSingleNode("UserName").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
+            Step = "Click on Forgot Password? link";
+            pg_LoginPage.NeedFurtherHelp();
+
 
         }
-
-
 
     }
 }

@@ -21,19 +21,22 @@ using System.Threading;
 
 namespace ApplicationName.Automation.Tests.TestScripts
 {
-    [Script("Iteration_2", "US5344 - SignIn with user credentials", "", "Mobile", "Error message displayed when valid credentials of inactive user are provided")]
-    class TC14250_ValidLoginsforInactiveuser : BaseTest
+    [Script("Iteration_2", "US5344 - SignIn with user credentials", "", "Mobile", "Different types of YPO members are able to log in to YPO app")]
+    class TC14253_YPOSpouseLogin : BaseTest
     {
         //public IOSDriver<IOSElement> driver;
         protected override void ExecuteTestCase()
         {
 
-
             Reporter.Add(new Chapter("Validating Sign In"));
+            var pg_CommonPage = Page<Common>(Driver, TestDataNode, Reporter);
             var pg_LoginPage = Page<HomeSiteLogin>(Driver, TestDataNode, Reporter);
 
-            Step = "Usernamefield_pre_populatedifRemembermeisturnedON";
-            pg_LoginPage.InactiveUser(TestDataNode.SelectSingleNode("UserName").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
+         Step = "Login with YPO_member";
+         pg_LoginPage.Login(TestDataNode.SelectSingleNode("YPOSpouse").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
+         Step = "Wait for Directory Page";
+        pg_LoginPage.WaitforDirectorypage();
+
 
         }
 

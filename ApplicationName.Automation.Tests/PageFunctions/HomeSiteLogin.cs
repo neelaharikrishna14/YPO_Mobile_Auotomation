@@ -162,8 +162,207 @@ namespace ApplicationName.Automation
             }
         }
 
-       
 
+        By text_sim
+        {
+            get
+            {
+                return Locator.GetLocator("NoSiM");
+            }
+        }
+
+
+
+        By btn_YpoApp
+        {
+            get
+            {
+                return Locator.GetLocator("YpoApp");
+            }
+        }
+
+        By txt_Password1
+        {
+            get
+            {
+                return Locator.GetLocator("Password1");
+            }
+        }
+        By txt_Password2
+        {
+            get
+            {
+                return Locator.GetLocator("Password2");
+            }
+        }
+
+        By btn_forgotUsernamelink
+        {
+            get
+            {
+                return Locator.GetLocator("forgotUsernamelink");
+            }
+        }
+        By btn_forgotPasswordlink
+        {
+            get
+            {
+                return Locator.GetLocator("forgotPasswordlink");
+            }
+        }
+
+        By txt_EmailAddress
+        {
+            get
+            {
+                return Locator.GetLocator("EmailAddress");
+            }
+        }
+        By btn_NeedFurtherHelpLink
+        {
+            get
+            {
+                return Locator.GetLocator("NeedFurtherHelpLink");
+            }
+        }
+        By btn_GoBack
+        {
+            get
+            {
+                return Locator.GetLocator("GoBack");
+            }
+        }
+        By btn_TermsAndPolicies
+        {
+            get
+            {
+                return Locator.GetLocator("TermsAndPolicies");
+            }
+        }
+        By btn_CopyRightYPO2017
+        {
+            get
+            {
+                return Locator.GetLocator("CopyRightYPO2017");
+            }
+        }
+        By btn_HelpDeskEmail
+        {
+            get
+            {
+                return Locator.GetLocator("HelpDeskEmail");
+            }
+        }
+        By txt_HelpDesk_ComposeMail
+        {
+            get
+            {
+                return Locator.GetLocator("HelpDesk_ComposeMail");
+            }
+        }
+
+        By btn_HelpDesk_ComposeMail_Cancel
+        {
+            get
+            {
+                return Locator.GetLocator("HelpDesk_ComposeMail_CancelButton");
+            }
+        }
+
+        By btn_HelpDesk_ComposeMail_DeleteDraft
+        {
+            get
+            {
+                return Locator.GetLocator("HelpDesk_ComposeMail_DeleteDraft");
+            }
+        }
+
+        By btn_Call_button_PhoneNumber1
+        {
+            get
+            {
+                return Locator.GetLocator("Call_button_PhoneNumber1");
+            }
+        }
+        By btn_Call_button_PhoneNumber2
+        {
+            get
+            {
+                return Locator.GetLocator("Call_button_PhoneNumber2");
+            }
+        }
+
+        By btn_Cancel_phone_numberfield
+        {
+            get
+            {
+                return Locator.GetLocator("Cancel_phone_numberfield");
+            }
+        }
+        By btn_PhoneNumber1
+        {
+            get
+            {
+                return Locator.GetLocator("PhoneNumber1");
+            }
+        }
+        By btn_PhoneNumber2
+        {
+            get
+            {
+                return Locator.GetLocator("PhoneNumber2");
+            }
+        }
+        By txt_M2MXSupport
+        {
+            get
+            {
+                return Locator.GetLocator("M2MXSupportEmail");
+            }
+        }
+
+
+
+        By txt_Directory
+        {
+            get
+            {
+                return Locator.GetLocator("DirectoryText");
+            }
+        }
+
+
+        By validation_msg_inactive_user
+        {
+            get
+            {
+                return Locator.GetLocator("InactiveUser_val_msg");
+            }
+        }
+        By validation_msg_invalidcredentials
+        {
+            get
+            {
+                return Locator.GetLocator("validation_for_invalidlogin");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // =================================================================================
 
 
         By btn_claims
@@ -540,6 +739,442 @@ namespace ApplicationName.Automation
             }
             return isSuccess;
         }
+
+
+
+
+        //padma code
+
+        public bool NeedFurtherHelp(string link = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+                //Thread.Sleep(10000);
+
+                if (link.Equals("Forgot Username?"))
+                {
+                    Reporter.Add(new Act("Click on forgotUsername link"));
+                    ClickOnObject(btn_forgotUsernamelink);
+                }
+                else
+                {
+                    Reporter.Add(new Act("Click on forgotPassword link"));
+                    ClickOnObject(btn_forgotPasswordlink);
+                }
+
+                Reporter.Add(new Act("Verify the EmailAddress in Username Recovery page"));
+                ValidateObjectAttributeValue(txt_EmailAddress, "text", "EmailAddress", 1);
+
+                Reporter.Add(new Act("Verify the NeedFurtherHelp in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_NeedFurtherHelpLink, "text", "Need Further Help?", 1);
+
+                Reporter.Add(new Act("Verify the GoBack in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_GoBack, "text", "   GO BACK", 1);
+
+                // Reporter.Add(new Act("Verify the Terms of Use   |   Privacy Policy in Username Recovery page"));
+                //  String TandP = GetObjectAttributeValue(btn_TermsAndPolicies, "text");
+                // Console.WriteLine(TandP);
+                // ValidateObjectAttributeValue(btn_TermsAndPolicies, "text", "Terms of Use   |   Privacy Policy", 1);
+
+
+                Reporter.Add(new Act("Verify the CopyRightYPO2017 in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_CopyRightYPO2017, "text", "© 2017 YPO ", 1);
+
+                Reporter.Add(new Act("Verify the NeedFurtherHelp in Username Recovery page"));
+                ClickOnObject(btn_NeedFurtherHelpLink);
+
+                Reporter.Add(new Act("Verify the CopyRightYPO2017 in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_CopyRightYPO2017, "text", "© 2017 YPO ", 1);
+
+                Reporter.Add(new Act("Verify the HelpDesk in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_HelpDeskEmail, "text", "helpdesk@ypo.org", 1);
+
+                Reporter.Add(new Act("Verify the PhoneNumber1 in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_PhoneNumber1, "text", "+1 972 587 1500", 1);
+
+                Reporter.Add(new Act("Verify the PhoneNumber2 in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_PhoneNumber2, "text", "+1 800 773 7976", 1);
+
+                Reporter.Add(new Act("Verify the M2MxEmail in Username Recovery page"));
+                ValidateObjectAttributeValue(txt_M2MXSupport, "text", "m2mx@ypo.org", 1);
+
+                Reporter.Add(new Act("Click on HelpDesk email in Username Recovery page"));
+                ClickOnObject(btn_HelpDeskEmail);
+
+                String a = Driver.FindElement(By.Name("helpdesk@ypo.org")).GetAttribute("name");
+                Console.WriteLine(a);
+                if (a.Equals("helpdesk@ypo.org"))
+                {
+                    Reporter.Add(new Act("To field is filled with helpdesk@ypo.org"));
+                }
+                else
+                {
+                    Reporter.Add(new Act("To field is  not pre-populated with helpdesk@ypo.org"));
+                }
+                //Reporter.Add(new Act("Verify the HelpDesk email in compose mail in Username Recovery page"));
+                //ValidateObjectAttributeValue(txt_HelpDesk_ComposeMail, "a", "helpdesk@ypo.org", 1);
+                //WaitForElementVisible(txt_HelpDesk_ComposeMail);
+
+
+
+                Reporter.Add(new Act("Click on Cancel button in HelpDesk compose mail"));
+                ClickOnObject(btn_HelpDesk_ComposeMail_Cancel);
+
+                Reporter.Add(new Act("Click on Delete Draft button in HelpDesk compose mail"));
+                ClickOnObject(btn_HelpDesk_ComposeMail_DeleteDraft);
+
+                Reporter.Add(new Act("Click on Cancel button in HelpDesk compose mail"));
+                ClickOnObject(btn_PhoneNumber1);
+
+                Reporter.Add(new Act("Verify the PhoneNumber1 in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_Call_button_PhoneNumber1, "text", "+1 972 587 1500", 1);
+
+                Reporter.Add(new Act("Verify the PhoneNumber2 in Username Recovery page"));
+                ValidateObjectAttributeValue(btn_Call_button_PhoneNumber2, "text", "+1 800 773 7976", 1);
+
+                Reporter.Add(new Act("Click on Cancel button in Phone number box"));
+                //ClickOnObject(btn_Cancel_phone_numberfield);
+                Driver.FindElement(By.XPath("//*[@class='UIAView' and @height>0 and ./*[@class='UIAButton'] and ./*[@text='Terms of Use   |   Privacy Policy']]")).Click();
+
+                Reporter.Add(new Act("Click on M2Mx email in Username Recovery page"));
+                ClickOnObject(txt_M2MXSupport);
+
+                String a1 = Driver.FindElement(By.Name("m2mx@ypo.org")).GetAttribute("name");
+                Console.WriteLine(a1);
+                if (a1.Equals("helpdesk@ypo.org"))
+                {
+                    Reporter.Add(new Act("To field is filled with m2mx@ypo.org"));
+                }
+                else
+                {
+                    Reporter.Add(new Act("To field is  not pre-populated with m2mx@ypo.org"));
+                }
+                Reporter.Add(new Act("Click on Cancel button in HelpDesk compose mail"));
+                ClickOnObject(btn_HelpDesk_ComposeMail_Cancel);
+
+                Reporter.Add(new Act("Click on Delete Draft button in HelpDesk compose mail"));
+                ClickOnObject(btn_HelpDesk_ComposeMail_DeleteDraft);
+
+                Reporter.Add(new Act("Verify the GoBack in Username Recovery page"));
+                ClickOnObject(btn_GoBack);
+
+                Reporter.Add(new Act("Verify the GoBack in Username Recovery page"));
+                ClickOnObject(btn_GoBack);
+
+                Reporter.Add(new Act("Verify the  forgotUsername link"));
+                ValidateObjectAttributeValue(btn_forgotUsernamelink, "text", "   GO BACK", 1);
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+
+
+
+
+
+
+        public bool WaitforDirectorypage()
+        {
+            bool isSuccess = false;
+            try
+            {
+                Reporter.Add(new Act("Wait for Directory Page"));
+                WaitForElementVisible(txt_Directory);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+        public bool reOpenYPO()
+        {
+            bool isSuccess = false;
+            try
+            {
+                Driver.Close();
+                Thread.Sleep(50000);
+                Reporter.Add(new Act("Get the App to four ground from background"));
+                ClearObjectValue(btn_YpoApp);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+        public bool InvalidLogin(string val = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+
+
+                Reporter.Add(new Act("Verify the validation"));
+                //// GetObjectAttributeValue(validation_msg, "text");
+                ValidateObjectAttributeValue(validation_msg_invalidcredentials, "text", val);
+
+                isSuccess = true;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool InactiveUser(string userName = "", string password = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+
+
+                Reporter.Add(new Act("Verify the validation for Inactive User"));
+                // GetObjectAttributeValue(validation_msg_inactive_user, "text");
+                ValidateObjectAttributeValue(validation_msg_inactive_user, "text", "Your account is currently inactive", 60);
+
+                isSuccess = true;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+
+
+
+
+        public bool Insufficientchars27(string userName = "", string password = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+                Reporter.Add(new Act("Click on username field"));
+                ClickOnObject(txt_UserId);
+
+                Reporter.Add(new Act("Enter user name"));
+                SetValueToObject(txt_UserId, userName);
+
+                Reporter.Add(new Act("Click on password field"));
+                ClickOnObject(txt_Password);
+
+                Reporter.Add(new Act("Enter password"));
+                SetValueToObject(txt_Password, password);
+
+                Reporter.Add(new Act("Verify SignIn button"));
+                GetElementStateclick(btn_LogIn);
+
+
+                isSuccess = true;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool Insufficientchars36(string userName = "", string password = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+
+                Reporter.Add(new Act("Click on username field"));
+                ClickOnObject(txt_UserId);
+
+
+                Reporter.Add(new Act("Clear username field data"));
+                ClearObjectValue(txt_UserId);
+                Thread.Sleep(5000);
+
+
+                Reporter.Add(new Act("Enter user name"));
+                SetValueToObject(txt_UserId, userName);
+
+                Reporter.Add(new Act("Click on password field"));
+                ClearObjectValue(txt_Password1);
+
+
+                Reporter.Add(new Act("Enter password"));
+                SetValueToObject(txt_Password, password);
+
+                Reporter.Add(new Act("Verify SignIn button"));
+                GetElementStateclick(btn_LogIn);
+
+                isSuccess = true;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+        public bool Insufficientchars37(string userName = "", string password = "")
+        {
+            bool isSuccess = false;
+            try
+            {
+
+
+                Reporter.Add(new Act("Clear username field data"));
+                ClearObjectValue(txt_UserId);
+
+
+                Reporter.Add(new Act("Enter user name"));
+                SetValueToObject(txt_UserId, userName);
+
+                Reporter.Add(new Act("Click on password field"));
+
+                ClearObjectValue(txt_Password2);
+
+
+                Reporter.Add(new Act("Enter password"));
+                SetValueToObject(txt_Password, password);
+
+                Reporter.Add(new Act("Verify SignIn button"));
+                GetElementStateclick(btn_LogIn);
+
+                isSuccess = true;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return isSuccess;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -169,6 +169,33 @@ namespace Selenium.Automation.Accelerators
             }
             return flag;
         }
+
+
+
+        protected Boolean GetElementStateclick(By lookupBy)
+        {
+            Boolean flag = false;
+            try
+            {
+                flag = Driver.FindElement(lookupBy).Enabled;
+                Boolean falg1 = Driver.FindElement(lookupBy).Enabled;
+                if (flag == falg1)
+                {
+                    Console.WriteLine("SignIn disabled");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return flag;
+        }
+
+
+
+
+
         protected IWebElement GetNativeElementInAElement(IWebElement parentElement, By lookupBy, int maxWaitTime = 0)
         {
             IWebElement element = null;

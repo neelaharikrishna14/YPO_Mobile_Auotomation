@@ -27,22 +27,45 @@ namespace ApplicationName.Automation.Tests.TestScripts
         //public IOSDriver<IOSElement> driver;
         protected override void ExecuteTestCase()
         {
-           
+
             Reporter.Add(new Chapter("Validating Sign In"));
             var pg_CommonPage = Page<Common>(Driver, TestDataNode, Reporter);
-           // var pg_LoginPage = Page<HomeSiteLogin>(Driver, TestDataNode, Reporter);
-            // var pg_claims = Page<Claims>(Driver, TestDataNode, Reporter);
+            var pg_LoginPage = Page<HomeSiteLogin>(Driver, TestDataNode, Reporter);
 
-            Step = "Enter username";
-            Reporter.Add(new Act("Validate user name"));
-            Driver.FindElement(By.XPath("xpath=//*[@class='UIATextField']")).Click();
-            Reporter.Add(new Act("Enter user name"));
-            Driver.FindElement(By.XPath("xpath=//*[@class='UIATextField']")).SendKeys("Umanath_bhat");
-            Driver.FindElement(By.XPath("xpath=(//*[@class='UIAView' and ./parent::*[@class='UIAScrollView']]/*[@class='UIAView'])[2]")).SendKeys("ypot3st");
-            Driver.FindElement(By.XPath("xpath=//*[@text='Sign In']")).Click();
-            Thread.Sleep(5000);
-            string text1 = Driver.FindElement(By.XPath("//*[@text='Directory']']")).GetAttribute("value");
-            Console.WriteLine(text1);
+         Step = "Login with YPO_member";
+        pg_LoginPage.Login(TestDataNode.SelectSingleNode("YPOMember").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
+         Step = "Wait for Directory Page";
+        pg_LoginPage.WaitforDirectorypage();
+
+          //  Step = "Close the YPO app";
+          //  Driver.Quit();
+          //  Step = "Reopen the application";
+          // Thread.Sleep(59000);
+          // var pg_CommonPage1 = Page<Common>(Driver1, TestDataNode, Reporter);
+          //  DesiredCapabilities dc1 = new DesiredCapabilities();
+          //  dc1.SetCapability(IOSMobileCapabilityType.BundleId, "com.ypo.connect.qa");
+          //  Driver1 = new IOSDriver<IOSElement>(new Uri("http://localhost:4723/wd/hub"), dc1);
+          
+
+
+          // Step = "Login with YPO_Spouse_member";
+
+           
+          // Step = "Login with YPO_Spouse_member";
+          //  pg_LoginPage.Login(TestDataNode.SelectSingleNode("YPOSpouse").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);
+          //  Step = "Wait for Directory Page";
+          //  pg_LoginPage.WaitforDirectorypage();
+
+          //  Step = "Close the YPO app";
+          //Driver.Quit();
+          //  Step = "Reopen the application";
+          // Thread.Sleep(59000);
+           
+     /*       dc.SetCapability(IOSMobileCapabilityType.BundleId, "com.ypo.connect.qa");
+           Driver = new IOSDriver<IOSElement>(new Uri("http://localhost:4723/wd/hub"), dc);
+
+          Step = "Login with YPO_ChapterAdmin";
+         pg_LoginPage.Login(TestDataNode.SelectSingleNode("YPOChapterAdmin").InnerText, TestDataNode.SelectSingleNode("Password").InnerText);*/
 
         }
 

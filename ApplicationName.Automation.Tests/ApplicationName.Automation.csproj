@@ -70,14 +70,13 @@
     <Compile Include="PageFunctions\Home.cs" />
     <Compile Include="PageFunctions\HomeSiteLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestScripts\TC001_CancelFAQ.cs" />
-    <Compile Include="TestScripts\TC001_VerifyLoginFunctionality.cs" />
-    <Compile Include="TestScripts\TC001_SearchForProduct.cs" />
-    <Compile Include="TestScripts\TC004_ClaimCenter.cs" />
-    <Compile Include="TestScripts\TC002_ContactFAQ.cs" />
-    <Compile Include="TestScripts\TC002_NewClaims.cs" />
-    <Compile Include="TestScripts\TC003_ClaimsReporting.cs" />
-    <Compile Include="TestScripts\TC003_PartnerPGR.cs" />
+    <Compile Include="TestScripts\TC14239_NeedFurtherHelpPassword.cs" />
+    <Compile Include="TestScripts\TC14237_NeedFurtherHelpUsername.cs" />
+    <Compile Include="TestScripts\TC14247_Insufficientchars.cs" />
+    <Compile Include="TestScripts\TC14253_YPOChapterAdminLogin.cs" />
+    <Compile Include="TestScripts\TC14253_YPOMTM.cs" />
+    <Compile Include="TestScripts\TC14253_YPOSpouseLogin.cs" />
+    <Compile Include="TestScripts\TC14242_PrePopulatedUsernameField.cs" />
     <Compile Include="TestScripts\TC14348_VerifyPrivacyPolicydocumentwillbeopened_unauthenticatedusers.cs" />
     <Compile Include="TestScripts\TC14347_VerifyDisplayOfPrivacyPolicylink_unauthenticatedusers.cs" />
     <Compile Include="TestScripts\TC14346_TermsofUsedocumentwillbeopened_unauthenticatedusers.cs" />
@@ -97,7 +96,6 @@
     <Compile Include="TestScripts\TC14250_ValidLoginsforInactiveuser.cs" />
     <Compile Include="TestScripts\TC14249_InvalidCredentials.cs" />
     <Compile Include="TestScripts\TC14247_Invalidchars.cs" />
-    <Compile Include="TestScripts\TC14242_UsernameFieldPrepopulated.cs" />
     <Compile Include="TestScripts\SampleLogin.cs" />
   </ItemGroup>
   <ItemGroup>

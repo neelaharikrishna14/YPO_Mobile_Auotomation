@@ -1,35 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TestData>
+  
   <SampleLogin>
     <TDID>644</TDID>
     <UserName>homesitetestpolicy@hotmail.com</UserName>
     <Password>Policy@123</Password>
     <DefectID>NA</DefectID>
   </SampleLogin>
-  <TC14240_ValidLogin2>
+  
+  
+  <TC14242_PrePopulatedUsernameField>
     <TDID>644</TDID>
-    <UserName>homesitetestpolicy@hotmail.com</UserName>
-    <Password>Policy@123</Password>
-    <DefectID>NA</DefectID>
-  </TC14240_ValidLogin2>
-  <TC001_CancelFAQ>
-    <TDID>644</TDID>
-    <UserName>homesitetestpolicy@hotmail.com</UserName>
-    <Password>Policy@123</Password>
-    <DefectID>NA</DefectID>
-  </TC001_CancelFAQ>
-  <TC14242_UsernameFieldPrepopulated>
-    <TDID>644</TDID>
-    <UserName>homesitetestpolicy@hotmail.com</UserName>
-    <Password>Policy@123</Password>
-    <DefectID>NA</DefectID>
-  </TC14242_UsernameFieldPrepopulated>
-  <TC14249_InvalidCredentials>
-    <TDID>NA</TDID>
-    <UserName>Umanath_bhat1</UserName>
+    <UserName>Umanath_bhat</UserName>
     <Password>ypot3st</Password>
+    <ExpectedStatus>0</ExpectedStatus>
     <DefectID>NA</DefectID>
-  </TC14249_InvalidCredentials>
+  </TC14242_PrePopulatedUsernameField>
+  
 
   <TC14299_RememberMeDefaultSetting>
     <TDID>NA</TDID>
@@ -124,9 +111,89 @@
     <TDID>NA</TDID>
     <DefectID>NA</DefectID>
   </TC14348_VerifyPrivacyPolicydocumentwillbeopened_unauthenticatedusers>
+
+
+
+  <TC14249_InvalidCredentials>
+    <TDID>NA</TDID>
+    <UserName>Umanath_bhat1</UserName>
+    <Password>ypot3st</Password>
+    <invalidcredentialsval_msg>You have entered an invalid username or password. Please try again.</invalidcredentialsval_msg>
+    <DefectID>NA</DefectID>
+  </TC14249_InvalidCredentials>
+
+  <TC14247_Insufficientchars>
+    <TDID>NA</TDID>
+    <UserName>Um</UserName>
+    <Password>ypot3st</Password>
+    <UserName1>Uma</UserName1>
+    <Password1>ypot3s</Password1>
+    <UserName2>Uma</UserName2>
+    <Password2>ypot3st</Password2>
+    <DefectID>NA</DefectID>
+  </TC14247_Insufficientchars>
+
+  <TC14250_ValidLoginsforInactiveuser>
+    <TDID>NA</TDID>
+    <UserName>mikael_fredholm</UserName>
+    <Password>ypot3st</Password>
+    <DefectID>NA</DefectID>
+  </TC14250_ValidLoginsforInactiveuser>
+
+  <TC14253_YPOmembersLogin>
+    <TDID>NA</TDID>
+    <YPOMember>adarsh_radia</YPOMember>
+    <YPOSpouse>shari_abercromebie</YPOSpouse>
+    <YPOChapterAdmin>sandy_brros</YPOChapterAdmin>
+    <YPOMTM>Mandy_affreck</YPOMTM>
+    <Password>ypot3st</Password>
+    <DefectID>NA</DefectID>
+  </TC14253_YPOmembersLogin>
+
+  <TC14253_YPOSpouseLogin>
+    <TDID>NA</TDID>
+    <YPOSpouse>shari_abercromebie</YPOSpouse>
+    <Password>ypot3st</Password>
+    <DefectID>NA</DefectID>
+  </TC14253_YPOSpouseLogin>
+
+  <TC14253_YPOMTM>
+    <TDID>NA</TDID>
+    <YPOMTM>Mandy_affreck</YPOMTM>
+    <Password>ypot3st</Password>
+    <DefectID>NA</DefectID>
+  </TC14253_YPOMTM>
+
+  <TC14253_YPOChapterAdminLogin>
+    <TDID>NA</TDID>
+    <YPOChapterAdmin>priya_asnani</YPOChapterAdmin>
+    <Password>ypot3st</Password>
+    <DefectID>NA</DefectID>
+  </TC14253_YPOChapterAdminLogin>
+
+  <TC14255_FormerMember>
+    <TDID>NA</TDID>
+    <UserName>kaspar_basse</UserName>
+    <Password>ypot3st</Password>
+    <invalidcredentialsval_msg>You have entered an invalid username or password. Please try again.</invalidcredentialsval_msg>
+    <DefectID>NA</DefectID>
+  </TC14255_FormerMember>
+
+  <TC14237_NeedFurtherHelpUsername>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14237_NeedFurtherHelpUsername>
+
+  <TC14239_NeedFurtherHelpPassword>
+    <TDID>NA</TDID>
+    <DefectID>NA</DefectID>
+  </TC14239_NeedFurtherHelpPassword>
+
+
+
   
-  
- 
-  
-  
+
+
+
+
 </TestData>
